@@ -1,11 +1,136 @@
-/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
-
 $blue: #2d83ac;
+$red: #f04732;
+.w{
+    flex: 100%;
+}
+.mb30{
+    margin-bottom: 30px;
+}
+.flex{
+    display: flex;
+    flex-flow: row wrap;
+    position: relative;
+    right: -200px;
+}
+.line__more{
+    position: relative;
+}
+.line__more:before{
+    content: '44';
+    background-image: linear-gradient(to right, #ff3000, #ff3000 41%, transparent 40%);
+    position: absolute;
+    left: -600%;
+    width: 600%;
+    z-index: 2;
+    background-color: #ff3000;
+    top: 0;
+    bottom: 0;
+}
+.line__more__blue{
+    position: relative;
+}
+.line__more__blue:before{
+    content: '44';
+    background-image: linear-gradient(to right, $blue, $blue 41%, transparent 40%);
+    position: absolute;
+    left: -600%;
+    width: 600%;
+    z-index: 2;
+    background-color: $blue;
+    top: 0;
+    bottom: 0;
+}
+.teach__info-item{
+    width: 30%;
+    height: 280px;
+    margin: 10px;
+    position: relative;
+
+}
+.teach__info-item img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.teach__info-item .teach__info__box1{
+    text-align: center;
+    background: rgba(241, 86, 56, 0.77);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    height: 184px;
+}
+.teach__info-item .teach__info__box2{
+    text-align: center;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
+    display: flex;
+    flex-direction: column;
+}
+.teach__info-item .teach__info__box2 p{
+    flex-grow: 1;
+    color: #17527e;
+    font-family: "Fira Sans", Geneva, Tahoma, sans-serif;
+}
+.teach__info-item .teach__info__box2 img{
+    width: 100px;
+    height: 88px;
+    margin: auto;
+
+}
+.teach__info-item  .teach__info__box1 span{
+    font-size: 70px;
+    font-family: "Fira Sans", Geneva, Tahoma, sans-serif;
+    color:#fff;
+    font-weight: bold;
+
+}
+.teach__info-item  .teach__info__box1 p{
+    font-family: "Fira Sans", Geneva, Tahoma, sans-serif;
+    font-weight: 400;
+    color:#fff;
+    font-size: 16px;
+}
+#teach{
+    padding-bottom: 0!important;
+}
+.serv__call-btn{
+    background: $red;
+    border: none;
+    color: #fff;
+    width: 210px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    margin-top: 10px;
+    font-family: "Fira Sans", Geneva, Tahoma, sans-serif;
+    transition: all .5s;
+}
+.serv__call-btn:hover{
+    background: #bc4030;
+}
+.teach__info.flex{
+    padding-bottom: 0!important;
+}
+    /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+
+
 button,
 hr,
 input {
     overflow: visible
     }
+
 
 audio,
 canvas,
@@ -1001,14 +1126,16 @@ select {
 }
 .teach__title-text {
     position: relative;
-    z-index: 1
+    z-index: 2;
 }
 
 .teach__info {
     margin: 0 -15px;
     padding: 45px 15px;
-    background-color: #fff;
-    position: relative
+    padding-bottom: 0;
+    background-color: transparent;
+    position: relative;
+    left: -200px;
 }
 
 .teach__info-item {
@@ -1331,7 +1458,7 @@ select {
         -webkit-transform: skewX(25deg);
         -ms-transform: skewX(25deg);
         transform: skewX(25deg);
-        z-index: 0
+        z-index: 1
     }
 
     .teach__blue__title-wrap {
@@ -1469,24 +1596,26 @@ select {
     .teach__info:before {
         content: '';
         display: block;
-        width: 460px;
+        width: 788px;
         height: 100%;
-        background-color: #fff;
+        background-color: #eeeff1;
         position: absolute;
         top: 0;
         bottom: 0;
         z-index: 0
     }
     .teach__info:before {
-        left: -230px;
+        left: 23px;
         -webkit-transform: skewX(25deg);
         -ms-transform: skewX(25deg);
-        transform: skewX(25deg)
+        transform: skewX(25deg);
+        box-shadow: -4px 3px 5px rgba(0, 0, 0, .2);
+
     }
     .teach__info:after {
         -webkit-box-shadow: 8px 3px 14px -7px rgba(0, 0, 0, .2);
         box-shadow: 8px 3px 14px -7px rgba(0, 0, 0, .2);
-        right: -230px;
+        right: -362px;
         -webkit-transform: skewX(25deg);
         -ms-transform: skewX(25deg);
         transform: skewX(25deg)

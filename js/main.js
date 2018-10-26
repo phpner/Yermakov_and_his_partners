@@ -25,7 +25,7 @@ $(function () {
 
 
     //Попап обратной связи
-    $('#callback-popup-open').click(function () {
+    $('.callback-popup-open').click(function () {
         $('#callback-popup').addClass('popup--open');
     });
 
