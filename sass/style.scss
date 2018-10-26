@@ -1146,7 +1146,7 @@ select {
     right: 0
 }
 
-.teach__title,
+.teach__title,.serves_title,
 .teach__title-wrap {
     background-color: #ff3000
 }
@@ -1624,27 +1624,13 @@ footer img{
 
 @media (min-width:580px) {
     .teach__title-wrap {
-        background-color: transparent;
-        background-image: -webkit-gradient(linear, left top, right top, from(#ff3000), color-stop(41%, #ff3000), color-stop(40%, transparent));
-        background-image: -webkit-linear-gradient(left, #ff3000, #ff3000 41%, transparent 40%);
-        background-image: -o-linear-gradient(left, #ff3000, #ff3000 41%, transparent 40%);
-        background-image: linear-gradient(to right, #ff3000, #ff3000 41%, transparent 40%)
-    }
-    .teach__title:after {
-        content: '';
-        display: block;
-        width: 180px;
-        height: 100%;
-        background-color: #ff3000;
-        position: absolute;
-        top: 0;
-        right: -75px;
-        bottom: 0;
-        -webkit-transform: skewX(25deg);
-        -ms-transform: skewX(25deg);
-        transform: skewX(25deg);
-        z-index: 1
-    }
+         background-color: transparent;
+         background-image: -webkit-gradient(linear, left top, right top, from(#ff3000), color-stop(41%, #ff3000), color-stop(40%, transparent));
+         background-image: -webkit-linear-gradient(left, #ff3000, #ff3000 41%, transparent 40%);
+         background-image: -o-linear-gradient(left, #ff3000, #ff3000 41%, transparent 40%);
+         background-image: linear-gradient(to right, #ff3000, #ff3000 41%, transparent 40%)
+       }
+
 
     .teach__blue__title-wrap {
         background-color: transparent;
