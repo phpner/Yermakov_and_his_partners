@@ -1,3 +1,18 @@
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Fira Sans Regular"), local("FiraSans-Regular"), url(../fonts/fira-sans-v8-cyrillic_latin-regular.woff2) format("woff2"), url(../fonts/fira-sans-v8-cyrillic_latin-regular.woff) format("woff");
+  undefined: undefined
+}
+
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Fira Sans Bold"), local("FiraSans-Bold"), url(../fonts/fira-sans-v8-cyrillic_latin-700.woff2) format("woff2"), url(../fonts/fira-sans-v8-cyrillic_latin-700.woff) format("woff");
+  undefined: undefined
+}
 $blue: #2d83ac;
 $red: #f04732;
 .w{
@@ -121,6 +136,25 @@ $red: #f04732;
 }
 .teach__info.flex{
     padding-bottom: 0!important;
+}
+.teach .part{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  position: relative;
+  padding: 40px 0 ;
+}
+.teach .part img:not(:first-child){
+  margin-left: 70px;
+}
+.teach .part .two{
+  width: 263px;
+  height: 67px;
+}
+.teach .part .one{
+  width: 139px;
+  height: 139px;
 }
     /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 
@@ -598,25 +632,50 @@ select {
 }
 
 .menu__link:after {
-    content: '';
-    display: block;
-    margin: 0 auto;
-    width: -webkit-calc(100% - 50px);
-    width: calc(100% - 50px);
-    height: 3px;
-    background-color: #ff3000;
-    -webkit-transform: translateY(-2px);
-    -ms-transform: translateY(-2px);
-    transform: translateY(-2px);
-    -webkit-transition: opacity .3s ease-in-out, -webkit-transform .3s ease-in-out;
-    -o-transition: opacity .3s ease-in-out, transform .3s ease-in-out;
-    transition: opacity .3s ease-in-out, transform .3s ease-in-out;
-    transition: opacity .3s ease-in-out, transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 0
+   content: '';
+   display: block;
+   margin: 0 auto;
+   width: -webkit-calc(100% - 50px);
+   width: calc(100% - 50px);
+   height: 3px;
+   background-color: #ff3000;
+   -webkit-transform: translateY(-2px);
+   -ms-transform: translateY(-2px);
+   transform: translateY(-2px);
+   -webkit-transition: opacity .3s ease-in-out, -webkit-transform .3s ease-in-out;
+   -o-transition: opacity .3s ease-in-out, transform .3s ease-in-out;
+   transition: opacity .3s ease-in-out, transform .3s ease-in-out;
+   transition: opacity .3s ease-in-out, transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+   position: absolute;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   opacity: 0
+ }
+
+.activeMenu{
+  position: relative;
+}
+.activeMenu:after {
+  content: '';
+  display: block;
+  margin: 0 auto;
+  width: -webkit-calc(100% - 50px);
+  width: calc(100% - 50px);
+  height: 3px;
+  background-color: #ff3000;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  -webkit-transition: opacity .3s ease-in-out, -webkit-transform .3s ease-in-out;
+  -o-transition: opacity .3s ease-in-out, transform .3s ease-in-out;
+  transition: opacity .3s ease-in-out, transform .3s ease-in-out;
+  transition: opacity .3s ease-in-out, transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
 }
 
 .about,
@@ -771,8 +830,9 @@ select {
 }
 
 .chance:before {
-    background-color: rgba(33, 33, 33, .6);
-    z-index: 2
+   background: url("../img/bg_bottom.png")0 0 no-repeat;
+    z-index: 2;
+  background-position: 100% 100%;
 }
 
 .u-mobile .chance:after {
@@ -1421,21 +1481,146 @@ select {
     border-top-color: transparent
 }
 
-@font-face {
-    font-family: 'Fira Sans';
-    font-style: normal;
-    font-weight: 400;
-    src: local("Fira Sans Regular"), local("FiraSans-Regular"), url(../fonts/fira-sans-v8-cyrillic_latin-regular.woff2) format("woff2"), url(../fonts/fira-sans-v8-cyrillic_latin-regular.woff) format("woff");
-    undefined: undefined
+.teach__title:after {
+  content: '';
+  display: block;
+  width: 180px;
+  height: 100%;
+  background-color: #ff3000;
+  position: absolute;
+  top: 0;
+  right: -75px;
+  bottom: 0;
+  -webkit-transform: skewX(25deg);
+  -ms-transform: skewX(25deg);
+  transform: skewX(25deg);
+  z-index: 1
 }
 
-@font-face {
-    font-family: 'Fira Sans';
-    font-style: normal;
-    font-weight: 700;
-    src: local("Fira Sans Bold"), local("FiraSans-Bold"), url(../fonts/fira-sans-v8-cyrillic_latin-700.woff2) format("woff2"), url(../fonts/fira-sans-v8-cyrillic_latin-700.woff) format("woff");
-    undefined: undefined
+.teach__blue__title-wrap {
+  background-color: transparent;
+  background-image: -webkit-gradient(linear, left top, right top, from($blue), color-stop(41%, $blue), color-stop(40%, transparent));
+  background-image: -webkit-linear-gradient(left, $blue, $blue 41%, transparent 40%);
+  background-image: -o-linear-gradient(left, $blue, $blue 41%, transparent 40%);
+  background-image: linear-gradient(to right, $blue, $blue 41%, transparent 40%)
 }
+.teach__blue__title:after{
+  content: '';
+  display: block;
+  width: 180px;
+  height: 100%;
+  background-color: $blue;
+  position: absolute;
+  top: 0;
+  right: -75px;
+  bottom: 0;
+  -webkit-transform: skewX(25deg);
+  -ms-transform: skewX(25deg);
+  transform: skewX(25deg);
+  z-index: 0
+}
+footer {
+  background: #fff;
+}
+footer .row{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  padding-top: 60px;
+  margin-bottom: 40px;
+}
+footer .footer__menu {
+  margin-left: auto;
+}
+footer .footer__menu .menu li a{
+  font-size: 15px;
+}
+footer .tel{
+  color: $blue;
+  margin-left: 20px;
+  font-weight: bold;
+  font-family: inherit;
+}
+footer img{
+  width: 164px;
+  height: 55px;
+}
+ footer .work{
+   color: #8e959b;
+   margin-left: auto;
+   font-size: 16px;
+ }
+
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+  .teach .part img:not(:first-child) {
+    margin-left: 14px;
+  }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+  .teach .part .one {
+    width: 73px;
+    height: 73px;
+  }
+  .teach .part .two {
+    width: 240px;
+    height: 54px;
+
+  }
+  .teach__info-item .teach__info__box2{
+    height: auto;
+    min-height: 100%;
+  }
+  .teach__info-item {
+    width: 36%;
+    height: 280px;
+    margin: 10px;
+    position: relative;
+    margin: auto;
+  }
+  .chance:before {
+
+    background-position: 53% 100%;
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+  .flex{
+    flex-flow: column;
+  }
+  .teach__info-item{
+    width: 280px;
+  }
+  .teach .part{
+    flex-direction: column;
+  }
+  .teach .part img:not(:first-child) {
+    margin-left: 0;
+    margin-top: 29px;
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+  .teach__title-text{
+    text-align: center;
+  }
+  footer .footer__menu .menu{
+    text-align: center;
+  }
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
+
 
 @media (min-width:580px) {
     .teach__title-wrap {
@@ -1615,7 +1800,7 @@ select {
     .teach__info:after {
         -webkit-box-shadow: 8px 3px 14px -7px rgba(0, 0, 0, .2);
         box-shadow: 8px 3px 14px -7px rgba(0, 0, 0, .2);
-        right: -362px;
+        right: -380px;
         -webkit-transform: skewX(25deg);
         -ms-transform: skewX(25deg);
         transform: skewX(25deg)

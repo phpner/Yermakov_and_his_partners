@@ -95,7 +95,7 @@ $(function () {
 //Скролл к секции
 var $header = $('#header');
 
-$('.js-scroll-to').click(function (e) {
+/*$('.js-scroll-to').click(function (e) {
     e.preventDefault();
 
     var section_id = $(this).attr('href') || $(this).attr('data-href'),
@@ -104,8 +104,18 @@ $('.js-scroll-to').click(function (e) {
     $('html, body').animate({
         scrollTop: scroll_to
     }, 2000);
-});
+});*/
 
+var f = window.location.pathname;
+
+$(".menu li a").each(function () {
+
+    if ($(this).attr('href') == f) {
+        $(this).addClass('activeMenu');
+
+        console.log($(this).attr('href') +"   "+ f);
+    }
+});
 
 
 function isMobile() {
