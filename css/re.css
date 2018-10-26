@@ -658,6 +658,96 @@ footer .work{
     bottom: 0;
     opacity: 1!important;
 }
+.for_section{
+    padding-bottom: 50px;
+}
+.for_section .title_form{
+    color: #17527e;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    display: block;
+}
+.for_section .group_input{
+    display: flex;
+}
+.for_section .group_input input{
+    height: 50px;
+    background: transparent;
+    border-width: 1px ;
+    border-style: solid;
+    border-color: #a4a9ac;
+    padding-left: 20px;
+    color: #17527e;
+}
+.for_section .group_input input::placeholder{
+
+    color: #17527e;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.for_section textarea {
+    background: transparent;
+    border-width: 1px ;
+    border-style: solid;
+    border-color: #a4a9ac;
+    border-top: none;
+    padding-left: 20px;
+    padding-top: 20px;
+    color: #17527e;
+}
+.for_section .group_block{
+    display: flex;
+}
+.for_section .group_block #chech{
+    display: none;
+}
+.for_section .group_block #chech + label{
+    width: 30px;
+    height: 30px;
+    display: block;
+    border: 1px solid #000;
+    position: relative;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.for_section .group_block #chech:checked + label:before{
+    content: "";
+    background: #17527e;
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    left: 50%;
+    top: 50%;
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+}
+.for_section .group_block{
+    margin-top: 20px;
+}
+.for_section .group_block input[type='submit']{
+    width: 200px;
+    height: 45px;
+    border: none;
+    background: #ef4632;
+    color: #fff;
+    font-family: inherit;
+    font-weight: 200;
+    cursor: pointer;
+    margin-left: auto;
+}
+.for_section .group_block input[type='submit']:hover{
+    background: #bc4030;
+}
+.for_section .group_block p{
+    color: #17527e;
+    font-weight: 400;
+    font-size: 17px;
+    cursor: pointer;
+    user-select: none;
+}
 /*==========  Desktop First Method  ==========*/
 
 /* Large Devices, Wide Screens */
@@ -681,12 +771,25 @@ footer .work{
     .about_file .wrap .row .block{
         margin-top: 10px;
     }
+    .for_section .group_block{
+        flex-flow: row wrap;
+    }
+    .for_section .group_block p{
+        width: 80%;
+    }
+    .for_section .group_block input[type='submit']{
+        margin-top: 20px;
+    }
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
     footer .footer__menu .menu{
         text-align: center;
+    }
+    .for_section .group_block input[type='submit']{
+        margin: auto;
+        margin-top: 20px;
     }
 }
 

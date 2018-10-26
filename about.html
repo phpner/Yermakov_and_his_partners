@@ -252,8 +252,24 @@
         </div>
     <section class="for_section">
         <div class="col-10">
-            <span>Связаться</span>
-            <form action=""></form>
+            <span class="title_form">Связаться</span>
+            <form action="">
+                <div class="group_input">
+                    <input name="name" type="text"  placeholder="Ваше имя">
+                    <input name="tel" type="tel"  placeholder="Ваш телефон">
+                    <input name="email" type="text" placeholder="Ваша почта">
+                </div>
+                <textarea name="text" id="" cols="30" rows="10">Сообщение</textarea>
+                <div class="group_block">
+                    <input name="chech" type="checkbox" id="chech">
+                    <label for="chech"></label>
+                    <p onclick="$('#chech').trigger('click')">
+                        Я согласен на передачу и обработку  персональных данных, а также на получение <br>
+                        информации обо мне
+                    </p>
+                    <input type="submit">
+                </div>
+            </form>
         </div>
     </section>
 
