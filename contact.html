@@ -73,7 +73,7 @@
 </svg>
 
 
-<div class="serves-wrap page-wrap mb30">
+<div class="serves-wrap page-wrap">
 
     <svg id="middle-triangle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="triangle-middle" viewBox="0 0 585 1253"
          width="585" height="1253" preserveAspectRatio="none">
@@ -96,7 +96,7 @@
     <section class="readcrumbs">
         <div class="container row">
             <a class="main" href="/">Главная</a>
-            <a class="next" href="/about.html">Новости</a>
+            <a class="next" href="/about.html">Контакты</a>
         </div>
     </section>
 
@@ -104,53 +104,54 @@
         <div class="serves__title-wrap">
             <div class="col-10">
                 <div class="serves_title">
-                    <h1 class="teach__title-text">Новости</h1>
+                    <h1 class="teach__title-text">КОНТАКТЫ</h1>
                 </div>
             </div>
         </div>
 
-    <div class="col-10">
-        <ul class="teach__info">
-            <li class="teach__info-item">
-                <div class="title">Заголовок новости</div>
-                <div class="editor-content">Мы научим как правильно выбрать округ, провести исследования стартовых позиций, сформировать свою команду,
-                    разработать стратегию и план кампании.</div>
-            </li>
-            <li class="teach__info-item">
-                <div class="title">Заголовок новости</div>
-                <div class="editor-content">Мы расскажем без кого на выборах не обойтись, а на кого не стоит тратить денег.</div>
-            </li>
-            <li class="teach__info-item">
-                <div class="title">Заголовок новости</div>
-                <div class="editor-content">Мы покажем, как правильно оформлять подписи в случае самовыдвижения, и подробно объясним какие необходимо подготовить документы.</div>
-            </li>
-            <li class="teach__info-item">
-                <div class="title">Заголовок новости</div>
-                <div class="editor-content">Вы узнаете какой бывает агитация, виды, стоимость, эффективность. Мы разберём на конкретных примерах, типовые ошибки, которые
-                    допускают кандидаты, при разработке АПМ.</div>
-            </li>
-            <li class="teach__info-item">
-                <div class="title">Заголовок новости</div>
-                <div class="editor-content">Познакомим с эффективными технологиями работы по привлечению голосов избирателей.</div>
-            </li>
-            <li class="teach__info-item">
-                <div class="title">Заголовок новости</div>
-                <div class="editor-content">Мы дадим вам пошаговую инструкцию как остановить подкуп избирателей, незаконную агитацию и противостоять административному
-                    давлению.</div>
-            </li>
-        </ul>
-    </div>
-    <div class="pagination">
-        <a class="prev" href="#"></a>
-        <a href="#">1</a>
-        <a href="#">2</a>
-        <a href="#">3</a>
-        <a class="activ" href="#">4</a>
-        <a href="#">5</a>
-        <a href="#">...</a>
-        <a href="#">40</a>
-        <a class="next" href="#"></a>
-    </div>
+        <div class="col-10 contact mb-40">
+            <div class="map"><img src="img/map.png" alt=""></div>
+            <div class="teach__contact">
+                <div class="wrap flex ">
+                    <div class="contact__cont">
+                        <div class="item">
+                            <span>Адрес</span> <br>
+                            <p>ул. Уличная, 22, офис. 55</p>
+                        </div>
+                        <div class="item">
+                            <span>Телефон</span> <br>
+                            <p>8 999 089-18-43</p>
+                        </div>
+                        <div class="item">
+                            <span>Почта</span> <br>
+                            <p>Email@mail.ru</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="for_section">
+        <div class="col-10">
+            <span class="title_form pt32">Связаться</span>
+            <form action="">
+                <div class="group_input">
+                    <input name="name" type="text"  placeholder="Ваше имя">
+                    <input name="tel" type="tel"  placeholder="Ваш телефон">
+                    <input name="email" type="text" placeholder="Ваша почта">
+                </div>
+                <textarea name="text" id="" cols="30" rows="10">Сообщение</textarea>
+                <div class="group_block">
+                    <input name="chech" type="checkbox" id="chech">
+                    <label for="chech"></label>
+                    <p onclick="$('#chech').trigger('click')">
+                        Я согласен на передачу и обработку  персональных данных, а также на получение <br>
+                        информации обо мне
+                    </p>
+                    <input type="submit">
+                </div>
+            </form>
+        </div>
     </section>
 
 </div>
