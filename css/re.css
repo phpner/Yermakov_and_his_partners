@@ -926,11 +926,13 @@ footer .work{
     padding: 1px 8px;
 }
 .pagination a:hover{
-    font-weight: bold;
+    color: #557278;
 }
 .pagination a:first-child{
     margin-left: 0;
 }
+
+
 /*==========  Desktop First Method  ==========*/
 
 /* Large Devices, Wide Screens */
@@ -993,6 +995,7 @@ footer .work{
         width: 100%!important;
         text-align: center;
     }
+
 }
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
@@ -1563,6 +1566,7 @@ footer .work{
     background-color: transparent;
     background-image: linear-gradient(to right, #ff3000, #ff3000 30%, transparent 0%);
   }
+
 }
 
 .teach__title {
@@ -1576,17 +1580,18 @@ footer .work{
   text-transform: uppercase;
   color: #fff;
   position: relative; }
+
 .serves_title {
     display: inline-block;
     padding: 38px 0;
-    width: 19%;
-    max-width: 530px;
+    width: 100%;
     background-color: #ff3000;
     font-size: 40px;
     font-weight: 700;
     text-transform: uppercase;
     color: #fff;
-    position: relative; }
+    position: relative;
+}
 
 @media (min-width: 580px) {
   .teach__title:after {
@@ -1614,6 +1619,16 @@ footer .work{
     bottom: 0;
     transform: skewX(25deg);
     z-index: 0; }
+
+    .anime__width{
+        width: 19%;
+        background-color: #ff3000;
+        transition: width .8s ease-in-out;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 0;
+    }
 }
 
 .teach__title-text {
@@ -1624,7 +1639,10 @@ footer .work{
   margin: 0 -15px;
   padding: 45px 15px;
   background-color: #fff;
-  position: relative; }
+  position: relative;
+  box-shadow: 24px 11px 14px -7px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+}
 
 @media (min-width: 1000px) {
   .teach__info:before {
@@ -1638,14 +1656,16 @@ footer .work{
     left: -230px;
     bottom: 0;
     transform: skewX(25deg);
-    z-index: 0; }
+    z-index: 0;
+      box-shadow: -10px 5px 14px -7px rgba(0, 0, 0, 0.2);
+  }
   .teach__info:after {
     content: '';
     display: block;
     width: 460px;
     height: 100%;
     background-color: #fff;
-    box-shadow: 8px 3px 14px -7px rgba(0, 0, 0, 0.2);
+    box-shadow: 8px 3px 14px -7px rgba(0, 0, 0, 0.2), 4px 10px 14px -7px rgba(0, 0, 0, 0.2);
     position: absolute;
     top: 0;
     right: -230px;
@@ -1699,7 +1719,9 @@ footer .work{
 
 .teach__info-item {
   position: relative;
-  z-index: 1; }
+  z-index: 1;
+
+}
 
 .teach__info-item:not(:last-of-type) {
   margin-bottom: 40px; }

@@ -22,6 +22,8 @@ $(function () {
     $('#bottom-triangle').addClass('triangle-bottom--show');
     $('.hero__bg-polygon').addClass('hero__bg-polygon--fit-width');
 
+    $('.serves_title').addClass('anime__width');
+
 
 
     //Попап обратной связи
