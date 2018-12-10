@@ -1,4 +1,26 @@
 $(function () {
+
+    $('.click-in').click(function () {
+
+        $("#nav-icon").toggleClass('open');
+        //$('#wrapper').toggleClass('over');
+        $(".header__menu").toggleClass('opener');
+
+    });
+
+
+
+
+    $(window).resize(function () {
+        if(window.outerWidth >= 992){
+            $(".header__menu").removeClass('opener');
+            $("#nav-icon").attr('class','');
+
+        }
+
+    });
+
+
     if (isMobile()) {
         $('body').addClass('u-mobile');
     };
@@ -108,16 +130,18 @@ var $header = $('#header');
     }, 2000);
 });*/
 
+
+// Активное меню
 var f = window.location.pathname;
 
 $(".menu li a").each(function () {
 
     if ($(this).attr('href') == f) {
         $(this).addClass('activeMenu');
-
-        console.log($(this).attr('href') +"   "+ f);
+        console.log(this)
     }
 });
+
 
 
 function isMobile() {
